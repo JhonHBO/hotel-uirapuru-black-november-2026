@@ -44,8 +44,12 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}.topnav{position:sticky;top:
 <div class="card"><div class="signal"><div class="signalicon">✓</div><div><div class="small">Decisão comercial</div><h3>Oferta e inventário</h3></div></div><p>Fechar preço, regras, datas de hospedagem, restrições e quantidade de quartos disponíveis.</p><span class="todo">Pendente · Hotel</span></div>
 <div class="card"><div class="signal"><div class="signalicon">↗</div><div><div class="small">Prontidão operacional</div><h3>Atendimento e rastreio</h3></div></div><p>Definir quem responde, horários, mensagem padrão, UTMs e registro das reservas atribuídas.</p><span class="todo">Pendente · Hotel + V4</span></div>
 </div>
+<div class="strategy-switch" role="tablist" aria-label="Alternar estrat?gia" style="display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 14px">
+<button type="button" class="strategy-tab active" id="tab-reativacao" role="tab" aria-selected="true" aria-controls="panel-reativacao" style="border:1px solid var(--red);background:var(--red);color:#fff;border-radius:999px;padding:11px 18px;font:700 14px 'DM Sans',Arial,sans-serif;cursor:pointer">Reativa&#231;&#227;o de clientes</button>
+<button type="button" class="strategy-tab" id="tab-black" role="tab" aria-selected="false" aria-controls="panel-black" tabindex="-1" style="border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:11px 18px;font:700 14px 'DM Sans',Arial,sans-serif;cursor:pointer">Promo&#231;&#227;o Black</button>
+</div>
 <div class="grid g2" style="margin-top:16px;align-items:start">
-<div class="card"><div class="tag">Frente 01 · Demanda corporativa</div><div class="split"><h3>Reativação de clientes</h3><span class="mono">Empresas que já se hospedaram</span></div><p class="small">Retomar relacionamento, recuperar diárias e abrir contratos de tarifa corporativa para 2027.</p><div class="mobile-scroll"><table class="table"><thead><tr><th>Prazo</th><th>Responsável</th><th>Ação</th><th>Concluído quando</th><th>Status</th></tr></thead><tbody>
+<div class="card strategy-panel" id="panel-reativacao" role="tabpanel" aria-labelledby="tab-reativacao"><div class="tag">Frente 01 · Demanda corporativa</div><div class="split"><h3>Reativação de clientes</h3><span class="mono">Empresas que já se hospedaram</span></div><p class="small">Retomar relacionamento, recuperar diárias e abrir contratos de tarifa corporativa para 2027.</p><div class="mobile-scroll"><table class="table"><thead><tr><th>Prazo</th><th>Responsável</th><th>Ação</th><th>Concluído quando</th><th>Status</th></tr></thead><tbody>
 <tr><td class="nowrap">Até 17/10</td><td>Hotel</td><td>Extrair lista de empresas hospedadas em 2025.</td><td>Base contém empresa, contato, diárias e data da última estadia; contatos revisados e arquivo entregue à V4.</td><td class="todo">Pendente</td></tr>
 <tr><td class="nowrap">Até 20/10</td><td>V4 + Hotel</td><td>Segmentar por frequência e prioridade.</td><td>Grupos de empresas frequentes, ocasionais e de uma estadia definidos; Hotel valida a ordem de abordagem.</td><td class="todo">Pendente</td></tr>
 <tr><td class="nowrap">Até 21/10</td><td>Hotel + V4</td><td>Definir condição corporativa e roteiro de contato.</td><td>Tarifa/condição para 2027, código “EMPRESA”, texto inicial e responsável por follow-up aprovados.</td><td class="todo">Pendente</td></tr>
@@ -54,7 +58,7 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}.topnav{position:sticky;top:
 <tr><td class="nowrap">Semanal · nov</td><td>Hotel</td><td>Fazer follow-up e ligação para empresas prioritárias sem resposta.</td><td>Tentativas e resultados registrados; reservas corporativas e diárias recuperadas atualizadas.</td><td class="todo">Recorrente</td></tr>
 <tr><td class="nowrap">02–10/12</td><td>V4 + Hotel</td><td>Fechar resultado da reativação.</td><td>Empresas contatadas, respostas, novas reservas, diárias e receita recuperadas consolidadas.</td><td class="todo">Agendado</td></tr>
 </tbody></table></div></div>
-<div class="card"><div class="tag">Frente 02 · Demanda de lazer</div><div class="split"><h3>Promoção Black</h3><span class="mono">Meta Ads · Google · WhatsApp</span></div><p class="small">Abrir uma oferta de prazo definido, captar conversas de reserva e medir conversão até a receita.</p><div class="mobile-scroll"><table class="table"><thead><tr><th>Prazo</th><th>Responsável</th><th>Ação</th><th>Concluído quando</th><th>Status</th></tr></thead><tbody>
+<div class="card strategy-panel" id="panel-black" role="tabpanel" aria-labelledby="tab-black" hidden><div class="tag">Frente 02 · Demanda de lazer</div><div class="split"><h3>Promoção Black</h3><span class="mono">Meta Ads · Google · WhatsApp</span></div><p class="small">Abrir uma oferta de prazo definido, captar conversas de reserva e medir conversão até a receita.</p><div class="mobile-scroll"><table class="table"><thead><tr><th>Prazo</th><th>Responsável</th><th>Ação</th><th>Concluído quando</th><th>Status</th></tr></thead><tbody>
 <tr><td class="nowrap">08–10/10</td><td>V4 apresenta<br>Hotel aprova</td><td>Fechar investimento e meta de reservas.</td><td>Meta Ads aprovada; Google definido como verba adicional ou fora do escopo; meta de reservas registrada.</td><td class="todo">Pendente</td></tr>
 <tr><td class="nowrap">Até 15/10</td><td>Hotel</td><td>Definir oferta, regras e inventário.</td><td>Preço/benefício, datas elegíveis, restrições, cancelamento e quartos disponíveis documentados.</td><td class="todo">Pendente</td></tr>
 <tr><td class="nowrap">Até 21/10</td><td>V4 + Hotel</td><td>Preparar mensuração e operação de atendimento.</td><td>UTMs e mensagem “BLACK” testadas; responsável, horários e registro de conversas/reservas definidos.</td><td class="todo">Pendente</td></tr>
@@ -71,4 +75,14 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}.topnav{position:sticky;top:
 <div class="note" style="margin-top:14px"><b>Marco compartilhado · 25/10:</b> V4 e Hotel confirmam o Go/No-Go da Promoção Black. Não ativar a oferta se preço, datas válidas, inventário, destino de reserva ou cobertura de WhatsApp estiverem indefinidos. A frente de reativação corporativa segue em fluxo próprio, com resultado e eventual verba pagos separados.</div>
 </div></section>
 </main><footer><div class="wrap">Plano de mídia elaborado a partir do planejamento estratégico do Hotel Uirapuru e da referência de mídia Black November 2026. Valores de investimento são propostas para validação do hotel; métricas projetadas não garantem resultado.</div></footer>
+<script>
+(()=>{
+ const tabs=[...document.querySelectorAll('[role="tab"]')];
+ const activate=(tab,focus=false)=>{
+  tabs.forEach(t=>{const selected=t===tab;t.setAttribute('aria-selected',selected);t.tabIndex=selected?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!selected;t.style.background=selected?'var(--red)':'#fff';t.style.color=selected?'#fff':'var(--ink)';t.style.borderColor=selected?'var(--red)':'var(--line)';});
+  if(focus)tab.focus();
+ };
+ tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>activate(tab));tab.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();activate(tabs[(index+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length],true);}});});
+})();
+</script>
 </body></html>
